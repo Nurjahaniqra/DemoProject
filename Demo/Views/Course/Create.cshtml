@@ -1,0 +1,68 @@
+﻿@model Demo.Data.Course
+@{
+	var title = "Create Course";
+	ViewData["Title"] = title;
+}
+<form method="post">
+	<div class="card">
+		<div class="card-header bg-success text-white">
+			<h2>@title</h2>
+		</div>
+		<div class="card-body">
+			<div asp-validation-summary="All" class="text-danger"></div>
+
+			<div class="form-floating mb-2">
+				<input asp-for="Code" class="form-control" placeholder=" " />
+				<label asp-for="Code" class="control-label"></label>
+				<span asp-validation-for="Code" class="text-danger"></span>
+			</div>
+			<div class="form-floating mb-2">
+				<input asp-for="Name" class="form-control" placeholder=" " />
+				<label asp-for="Name" class="control-label"></label>
+				<span asp-validation-for="Name" class="text-danger"></span>
+			</div>
+			<div class="form-floating mb-2">
+				<input asp-for="Credit" class="form-control" placeholder=" " />
+				<label asp-for="Credit" class="control-label"></label>
+				<span asp-validation-for="Credit" class="text-danger"></span>
+			</div>
+			<div class="form-floating mb-2">
+				<input asp-for="Description" class="form-control" placeholder=" " />
+				<label asp-for="Description" class="control-label"></label>
+				<span asp-validation-for="Description" class="text-danger"></span>
+			</div>
+			<div class="form-floating mb-2">
+				<select asp-for="DepartmentID" class="form-control" asp-items="ViewBag.Departments">
+					<option disabled selected>--Select Department--</option>
+				</select>
+				<label asp-for="DepartmentID" class="control-label"></label>
+				<span asp-validation-for="DepartmentID" class="text-danger"></span>
+			</div>
+			<div class="form-floating mb-2">
+				<select asp-for="SemesterID" class="form-control" asp-items="ViewBag.Semester">
+					<option disabled selected>--Select Semester--</option>
+				</select>
+				<label asp-for="SemesterID" class="control-label"></label>
+				<span asp-validation-for="SemesterID" class="text-danger"></span>
+			</div>
+		</div>
+		<div class="card-footer">
+			<div class="row">
+				<div class="col-12">
+					<div class="form-group mt-2">
+						<div class="d-flex mb-2">
+							<button type="submit" class="btn btn-lg btn-success">Create</button>
+							<a asp-action="Index" class="btn btn-lg btn-warning ms-1">Back to list</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</form>
+
+@section Scripts {
+	@{
+		await Html.RenderPartialAsync("_ValidationScriptsPartial");
+	}
+}
