@@ -21,11 +21,8 @@ namespace Demo.Controllers
         public IActionResult Index(int? pageNumber)
         {
             int pageSize = 2;
-            //var data=_Context.Departments.Where(i=>i.IsDelete==0).ToList();
             return View(PageInformation<Department>.Create(_Context.Departments.Where(i => i.IsDelete == 0),pageNumber ?? 1,pageSize));
-        }
-
-       
+        }       
 
 		[HttpGet]
         public IActionResult Create()
@@ -35,6 +32,7 @@ namespace Demo.Controllers
 	
 
 		[HttpPost]
+        [AutoValidateAntiforgeryToken]
         public IActionResult Create(Department model)
         {
             if(_Context.Departments.Any(i=>i.Code==model.Code))
@@ -66,25 +64,29 @@ namespace Demo.Controllers
             return View(model);
         }
 
-        [HttpPost]        
-        public IActionResult Edit(Department model)
+        [HttpPost]
+		[AutoValidateAntiforgeryToken]
+		public IActionResult Edit(Department model)
         {
-            if (!ModelState.IsValid)
-            {
-                return View(model);
-            }
-
             var data = _Context.Departments.Where(i => i.ID == model.ID).FirstOrDefault();
             if (data == null)
             {
                 return NotFound(); 
             }
-       
-            data.Code = model.Code;
-            data.Name = model.Name;
 
-			_Context.SaveChanges();
-            return RedirectToAction("Index");
+            if (ModelState.IsValid)
+            {
+				data.ID = model.ID;
+				data.Code = model.Code;
+				data.Name = model.Name;
+
+				_Context.Update(data);
+				_Context.SaveChanges();
+				return RedirectToAction("Index");
+				
+            }
+            return View(model);
+
         }
 
         [HttpGet]
@@ -98,6 +100,7 @@ namespace Demo.Controllers
 			return View(model);
 		}
 		[HttpPost]
+		[AutoValidateAntiforgeryToken]
 		public IActionResult Delete(Department model)
         {
             
@@ -109,8 +112,8 @@ namespace Demo.Controllers
             var IsDelete = 1;
 			data.IsDelete = IsDelete;
 			data.Code = model.Code;			
-			data.Name = model.Name;	
-			
+			data.Name = model.Name;
+			_Context.Update(data);
 			_Context.SaveChanges();
             return RedirectToAction("Index");
         }

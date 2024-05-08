@@ -1,4 +1,6 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using Microsoft.AspNetCore.Mvc.ModelBinding;
+using Microsoft.AspNetCore.Mvc.ModelBinding.Validation;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Demo.Models
@@ -18,9 +20,13 @@ namespace Demo.Models
         public decimal Credit { get; set; }
         public string Description { get; set; } = string.Empty;
         public int DepartmentID { get; set; }
-        public Department Department { get; set; }
         public int SemesterID { get; set; }
-        public Semester Semester { get; set; }
+
+        [ValidateNever]
+        public Department? Department { get; set; }
+
+		[ValidateNever]
+		public Semester? Semester { get; set; }
     }
 
 

@@ -23,6 +23,7 @@ namespace Demo.Controllers
 			return View();
 		}
 		[HttpPost]
+		[AutoValidateAntiforgeryToken]
 		public IActionResult Create(Semester model)
 		{
 
@@ -48,23 +49,24 @@ namespace Demo.Controllers
 		}
 
 		[HttpPost]
+		[AutoValidateAntiforgeryToken]
 		public IActionResult Edit(Semester model)
 		{
-			if (!ModelState.IsValid)
-			{
-				return View(model);
-			}
-
 			var data = _Context.Semesters.Where(i => i.ID == model.ID).FirstOrDefault();
 			if (data == null)
 			{
 				return NotFound();
 			}
-						
-			data.Name = model.Name;
 
-			_Context.SaveChanges();
-			return RedirectToAction("Index");
+			if (!ModelState.IsValid)
+			{
+				data.Name = model.Name;
+				_Context.Update(data);
+				_Context.SaveChanges();
+				return RedirectToAction("Index");
+			}
+				return View(model);						
+			
 		}
 		[HttpGet]
 		public IActionResult Delete(int id)
@@ -77,6 +79,7 @@ namespace Demo.Controllers
 			return View(model);
 		}
 		[HttpPost]
+		[AutoValidateAntiforgeryToken]
 		public IActionResult Delete(Semester model)
 		{
 

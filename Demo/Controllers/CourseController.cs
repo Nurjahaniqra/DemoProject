@@ -19,7 +19,7 @@ namespace Demo.Controllers
 			int pageSize = 2;
 			var data = _Context.Courses
 				.Include(x => x.Department)
-				.Include(x => x.Semester);           
+				.Include(x => x.Semester);
 			return View(PageInformation<Course>.Create(data, pageNumber ?? 1, pageSize));
 		}
 
@@ -29,7 +29,7 @@ namespace Demo.Controllers
 			
 			int pageSize = 2;
 			var courses = _Context.Courses.AsQueryable();
-			ViewBag.departmentId = departmentId;
+			//ViewBag.departmentId = departmentId;
 			ViewBag.Departments = new SelectList(_Context.Departments, "ID", "Name", departmentId);
 			if (departmentId!=0)
 			{
@@ -58,12 +58,9 @@ namespace Demo.Controllers
         }
 
         [HttpPost]
-        public IActionResult Create(Course model)
+		[AutoValidateAntiforgeryToken]
+		public IActionResult Create(Course model)
         {
-			if (_Context.Courses.Any(i => i.Credit == model.Credit))
-			{
-				ModelState.AddModelError("Credit", "The field Credit must be between 0.5 and 5.");
-			}
 			if (_Context.Courses.Any(i=>i.Code==model.Code))
             {
                 ModelState.AddModelError("Code","Code Must be Unique.");
@@ -75,13 +72,15 @@ namespace Demo.Controllers
 
                       
 
-			if (!ModelState.IsValid)
+			if (ModelState.IsValid)
             {
                 _Context.Courses.Add(model);
                 _Context.SaveChanges();
                 return RedirectToAction("Index");
             }
-            return View(model);
+			ViewBag.Departments = new SelectList(_Context.Departments, "ID", "Name");
+			ViewBag.Semester = new SelectList(_Context.Semesters, "ID", "Name");
+			return View(model);
 
         }
 
@@ -99,33 +98,33 @@ namespace Demo.Controllers
 
         }
         [HttpPost]
-        public IActionResult Edit(Course model)
+		[AutoValidateAntiforgeryToken]
+		public IActionResult Edit(Course model)
         {
 			ViewBag.Departments = new SelectList(_Context.Departments, "ID", "Name");
 			ViewBag.Semester = new SelectList(_Context.Semesters, "ID", "Name");
-			if(ModelState.IsValid)
-			{
-				return View(model);
-			}
 			var data = _Context.Courses.Where(i => i.ID == model.ID).FirstOrDefault();
-						
-					
-					if (data == null)
-					{
-						return NotFound();
-					}
+			if (data == null)
+			{
+				return NotFound();
+			}
+			if (ModelState.IsValid)
+			{
+				data.ID = model.ID;
+				data.Code = model.Code;
+				data.Name = model.Name;
+				data.Credit = model.Credit;
+				data.Description = model.Description;
+				data.DepartmentID = model.DepartmentID;
+				data.SemesterID = model.SemesterID;
+				_Context.Update(data);
+				_Context.SaveChanges();
+				return RedirectToAction("Index");
+				
+			}				
+		
+			return View(model);
 
-					data.Code = model.Code;
-					data.Name = model.Name;
-					data.Credit = model.Credit;
-					data.Description = model.Description;
-					data.DepartmentID = model.DepartmentID;
-					data.SemesterID = model.SemesterID;
-
-					_Context.SaveChanges();
-					return RedirectToAction("Index");				
-						
-			
 		}
 		[HttpGet]
 		public IActionResult Delete(int id)
@@ -141,6 +140,7 @@ namespace Demo.Controllers
 		}
 
 		[HttpPost]
+		[AutoValidateAntiforgeryToken]
 		public IActionResult Delete(Course model)
 		{
 			ViewBag.Departments = new SelectList(_Context.Departments, "ID", "Name");

@@ -27,8 +27,14 @@ namespace Demo.Models
             return new PageInformation<T>(item, count, pageSize, pageNumber);
         }
 
-        public bool HasPreviousPage => PageNumber > 1;
-        public bool NextPreviousPage => PageNumber < TotalPage;
+        //public bool HasPreviousPage => PageNumber > 1;
+        //public bool NextPreviousPage => PageNumber < TotalPage;
 
-    }
+		public bool HasPreviousPage => (PageNumber > 1);
+		public bool NextPreviousPage => (PageNumber < TotalPage);
+
+		public int FirstItemIndex => (PageNumber - 1) * PageSize + 1;
+		public int LastItemIndex => Math.Min(PageNumber * PageSize, TotalPage);
+
+	}
 }
