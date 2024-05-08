@@ -1,5 +1,6 @@
 ﻿using Demo.Data;
-using Demo.Data.ViewModel;
+using Demo.Models;
+using Demo.Models.ViewModel;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;

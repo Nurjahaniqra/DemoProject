@@ -3,20 +3,24 @@
   "WorkspaceRootPath": "E:\\CSharpOWN\\Src\\GTR\\LearnC#\\MVC\\V_Link Project\\NormalMVCProject\\DemoProject\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{68A6EBD9-C1D4-4EBD-AE77-B8E94EC9441E}|Demo\\Demo.csproj|e:\\csharpown\\src\\gtr\\learnc#\\mvc\\v_link project\\normalmvcproject\\demoproject\\demo\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{68A6EBD9-C1D4-4EBD-AE77-B8E94EC9441E}|Demo\\Demo.csproj|solutionrelative:demo\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{68A6EBD9-C1D4-4EBD-AE77-B8E94EC9441E}|Demo\\Demo.csproj|e:\\csharpown\\src\\gtr\\learnc#\\mvc\\v_link project\\normalmvcproject\\demoproject\\demo\\controllers\\coursecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{68A6EBD9-C1D4-4EBD-AE77-B8E94EC9441E}|Demo\\Demo.csproj|solutionrelative:demo\\controllers\\coursecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{68A6EBD9-C1D4-4EBD-AE77-B8E94EC9441E}|Demo\\Demo.csproj|e:\\csharpown\\src\\gtr\\learnc#\\mvc\\v_link project\\normalmvcproject\\demoproject\\demo\\data\\viewmodel\\courseviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{68A6EBD9-C1D4-4EBD-AE77-B8E94EC9441E}|Demo\\Demo.csproj|solutionrelative:demo\\data\\viewmodel\\courseviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{68A6EBD9-C1D4-4EBD-AE77-B8E94EC9441E}|Demo\\Demo.csproj|e:\\csharpown\\src\\gtr\\learnc#\\mvc\\v_link project\\normalmvcproject\\demoproject\\demo\\views\\department\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{68A6EBD9-C1D4-4EBD-AE77-B8E94EC9441E}|Demo\\Demo.csproj|solutionrelative:demo\\views\\department\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{68A6EBD9-C1D4-4EBD-AE77-B8E94EC9441E}|Demo\\Demo.csproj|e:\\csharpown\\src\\gtr\\learnc#\\mvc\\v_link project\\normalmvcproject\\demoproject\\demo\\views\\course\\getcoursesbydepartment.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{68A6EBD9-C1D4-4EBD-AE77-B8E94EC9441E}|Demo\\Demo.csproj|solutionrelative:demo\\views\\course\\getcoursesbydepartment.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{68A6EBD9-C1D4-4EBD-AE77-B8E94EC9441E}|Demo\\Demo.csproj|e:\\csharpown\\src\\gtr\\learnc#\\mvc\\v_link project\\normalmvcproject\\demoproject\\demo\\models\\course.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{68A6EBD9-C1D4-4EBD-AE77-B8E94EC9441E}|Demo\\Demo.csproj|solutionrelative:demo\\models\\course.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{68A6EBD9-C1D4-4EBD-AE77-B8E94EC9441E}|Demo\\Demo.csproj|e:\\csharpown\\src\\gtr\\learnc#\\mvc\\v_link project\\normalmvcproject\\demoproject\\demo\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{68A6EBD9-C1D4-4EBD-AE77-B8E94EC9441E}|Demo\\Demo.csproj|solutionrelative:demo\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{68A6EBD9-C1D4-4EBD-AE77-B8E94EC9441E}|Demo\\Demo.csproj|e:\\csharpown\\src\\gtr\\learnc#\\mvc\\v_link project\\normalmvcproject\\demoproject\\demo\\models\\viewmodel\\courseviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{68A6EBD9-C1D4-4EBD-AE77-B8E94EC9441E}|Demo\\Demo.csproj|solutionrelative:demo\\models\\viewmodel\\courseviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -31,6 +35,45 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "CourseController.cs",
+              "DocumentMoniker": "E:\\CSharpOWN\\Src\\GTR\\LearnC#\\MVC\\V_Link Project\\NormalMVCProject\\DemoProject\\Demo\\Controllers\\CourseController.cs",
+              "RelativeDocumentMoniker": "Demo\\Controllers\\CourseController.cs",
+              "ToolTip": "E:\\CSharpOWN\\Src\\GTR\\LearnC#\\MVC\\V_Link Project\\NormalMVCProject\\DemoProject\\Demo\\Controllers\\CourseController.cs",
+              "RelativeToolTip": "Demo\\Controllers\\CourseController.cs",
+              "ViewState": "AQIAABUAAAAAAAAAAAAYwBwAAAASAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-08T04:03:25.282Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "E:\\CSharpOWN\\Src\\GTR\\LearnC#\\MVC\\V_Link Project\\NormalMVCProject\\DemoProject\\Demo\\Views\\Department\\Index.cshtml",
+              "RelativeDocumentMoniker": "Demo\\Views\\Department\\Index.cshtml",
+              "ToolTip": "E:\\CSharpOWN\\Src\\GTR\\LearnC#\\MVC\\V_Link Project\\NormalMVCProject\\DemoProject\\Demo\\Views\\Department\\Index.cshtml",
+              "RelativeToolTip": "Demo\\Views\\Department\\Index.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAADYAAAAkAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-05-08T04:02:40.844Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Course.cs",
+              "DocumentMoniker": "E:\\CSharpOWN\\Src\\GTR\\LearnC#\\MVC\\V_Link Project\\NormalMVCProject\\DemoProject\\Demo\\Models\\Course.cs",
+              "RelativeDocumentMoniker": "Demo\\Models\\Course.cs",
+              "ToolTip": "E:\\CSharpOWN\\Src\\GTR\\LearnC#\\MVC\\V_Link Project\\NormalMVCProject\\DemoProject\\Demo\\Models\\Course.cs",
+              "RelativeToolTip": "Demo\\Models\\Course.cs",
+              "ViewState": "AQIAAAwAAAAAAAAAAAA1wBQAAAAyAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-08T03:57:57.099Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "_Layout.cshtml",
               "DocumentMoniker": "E:\\CSharpOWN\\Src\\GTR\\LearnC#\\MVC\\V_Link Project\\NormalMVCProject\\DemoProject\\Demo\\Views\\Shared\\_Layout.cshtml",
               "RelativeDocumentMoniker": "Demo\\Views\\Shared\\_Layout.cshtml",
@@ -43,41 +86,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "CourseViewModel.cs",
-              "DocumentMoniker": "E:\\CSharpOWN\\Src\\GTR\\LearnC#\\MVC\\V_Link Project\\NormalMVCProject\\DemoProject\\Demo\\Data\\ViewModel\\CourseViewModel.cs",
-              "RelativeDocumentMoniker": "Demo\\Data\\ViewModel\\CourseViewModel.cs",
-              "ToolTip": "E:\\CSharpOWN\\Src\\GTR\\LearnC#\\MVC\\V_Link Project\\NormalMVCProject\\DemoProject\\Demo\\Data\\ViewModel\\CourseViewModel.cs",
-              "RelativeToolTip": "Demo\\Data\\ViewModel\\CourseViewModel.cs",
+              "DocumentMoniker": "E:\\CSharpOWN\\Src\\GTR\\LearnC#\\MVC\\V_Link Project\\NormalMVCProject\\DemoProject\\Demo\\Models\\ViewModel\\CourseViewModel.cs",
+              "RelativeDocumentMoniker": "Demo\\Models\\ViewModel\\CourseViewModel.cs",
+              "ToolTip": "E:\\CSharpOWN\\Src\\GTR\\LearnC#\\MVC\\V_Link Project\\NormalMVCProject\\DemoProject\\Demo\\Models\\ViewModel\\CourseViewModel.cs",
+              "RelativeToolTip": "Demo\\Models\\ViewModel\\CourseViewModel.cs",
               "ViewState": "AQIAAAQAAAAAAAAAAAAzwAcAAAAlAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-07T13:39:50.285Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "CourseController.cs",
-              "DocumentMoniker": "E:\\CSharpOWN\\Src\\GTR\\LearnC#\\MVC\\V_Link Project\\NormalMVCProject\\DemoProject\\Demo\\Controllers\\CourseController.cs",
-              "RelativeDocumentMoniker": "Demo\\Controllers\\CourseController.cs",
-              "ToolTip": "E:\\CSharpOWN\\Src\\GTR\\LearnC#\\MVC\\V_Link Project\\NormalMVCProject\\DemoProject\\Demo\\Controllers\\CourseController.cs",
-              "RelativeToolTip": "Demo\\Controllers\\CourseController.cs",
-              "ViewState": "AQIAADwAAAAAAAAAAAAwwG4AAAAWAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-07T13:26:33.57Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "GetCoursesByDepartment.cshtml",
-              "DocumentMoniker": "E:\\CSharpOWN\\Src\\GTR\\LearnC#\\MVC\\V_Link Project\\NormalMVCProject\\DemoProject\\Demo\\Views\\Course\\GetCoursesByDepartment.cshtml",
-              "RelativeDocumentMoniker": "Demo\\Views\\Course\\GetCoursesByDepartment.cshtml",
-              "ToolTip": "E:\\CSharpOWN\\Src\\GTR\\LearnC#\\MVC\\V_Link Project\\NormalMVCProject\\DemoProject\\Demo\\Views\\Course\\GetCoursesByDepartment.cshtml",
-              "RelativeToolTip": "Demo\\Views\\Course\\GetCoursesByDepartment.cshtml",
-              "ViewState": "AQIAADAAAAAAAAAAAAAAAAEAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-05-06T17:55:14.422Z",
               "EditorCaption": ""
             }
           ]

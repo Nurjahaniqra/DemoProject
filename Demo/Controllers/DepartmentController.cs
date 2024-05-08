@@ -1,5 +1,6 @@
 ﻿using Demo.Data;
-using Demo.Data.ViewModel;
+using Demo.Models.ViewModel;
+using Demo.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
@@ -113,20 +114,7 @@ namespace Demo.Controllers
 			_Context.SaveChanges();
             return RedirectToAction("Index");
         }
-
-  //      private IActionResult GetDepartmentList(int currentPage)
-  //      {
-  //          int maxRowsPerPage = 5;
-  //          DepartmentVM departmentVM = new DepartmentVM();
-  //          departmentVM.departmentsList=(from department in _Context.Departments select department)
-  //              .OrderBy(i=>i.ID)
-  //              .Skip((currentPage-1)*maxRowsPerPage)
-  //              .Take(maxRowsPerPage).ToList();
-  //          double pageCount = (double)((decimal)_Context.Departments.Count() / Convert.ToDecimal(maxRowsPerPage));
-		//	departmentVM.PageCount=(int)Math.Ceiling(pageCount);
-		//	departmentVM.currentPageIndex = currentPage;
-  //          return View(departmentVM);
-		//}
+  
     }
 }
 

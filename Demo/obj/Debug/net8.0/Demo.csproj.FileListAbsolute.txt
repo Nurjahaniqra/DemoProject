@@ -526,3 +526,4 @@ E:\CSharpOWN\Src\GTR\LearnC#\MVC\V_Link Project\NormalMVCProject\DemoProject\Dem
 E:\CSharpOWN\Src\GTR\LearnC#\MVC\V_Link Project\NormalMVCProject\DemoProject\Demo\obj\Debug\net8.0\Demo.pdb
 E:\CSharpOWN\Src\GTR\LearnC#\MVC\V_Link Project\NormalMVCProject\DemoProject\Demo\obj\Debug\net8.0\Demo.genruntimeconfig.cache
 E:\CSharpOWN\Src\GTR\LearnC#\MVC\V_Link Project\NormalMVCProject\DemoProject\Demo\obj\Debug\net8.0\ref\Demo.dll
+E:\CSharpOWN\Src\GTR\LearnC#\MVC\V_Link Project\NormalMVCProject\DemoProject\Demo\obj\Debug\net8.0\Demo.sourcelink.json
