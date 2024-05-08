@@ -14,13 +14,14 @@ namespace Demo.Controllers
         {
             _Context = Context;
         }
-        public IActionResult Index()
+        public IActionResult Index(int? pageNumber)
         {
-            var data = _Context.Courses
+			int pageSize = 2;
+			var data = _Context.Courses
 				.Include(x => x.Department)
-                .Include(x=>x.Semester).ToList();
-            return View(data);
-        }
+				.Include(x => x.Semester);           
+			return View(PageInformation<Course>.Create(data, pageNumber ?? 1, pageSize));
+		}
 
 		[HttpGet]
 		public IActionResult GetCoursesByDepartment(int departmentId, int? pageNumber)

@@ -11,10 +11,11 @@ namespace Demo.Controllers
 		{
 			_Context = Context;
 		}
-		public IActionResult Index()
+		public IActionResult Index(int? pageNumber)
         {
-			var data = _Context.Semesters.ToList();
-            return View(data);
+			int pageSize = 2;
+			var data = _Context.Semesters;
+            return View(PageInformation<Semester>.Create(data, pageNumber ?? 1, pageSize));
         }
 		[HttpGet]
 		public IActionResult Create()
